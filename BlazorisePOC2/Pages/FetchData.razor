@@ -16,8 +16,12 @@ else
     <DataGrid TItem="WeatherForecast"
         Data="@forecasts"
         Filterable="true"
+        ShowPager="true"
+        PageSize="5"
+        Editable="true"
+        EditMode="DataGridEditMode.Inline"
         FilterMethod="DataGridFilterMethod.StartsWith">
-        <DataGridColumn TItem="WeatherForecast" Caption="Date" Field="@nameof(WeatherForecast.Date)"></DataGridColumn>
+        <DataGridColumn TItem="WeatherForecast" HeaderCellClass="p-5 bg-dark text-light text-center" Caption="Date" Field="@nameof(WeatherForecast.Date)"></DataGridColumn>
         <DataGridColumn TItem="WeatherForecast" Caption="Temp. C" Field="@nameof(WeatherForecast.TemperatureC)"></DataGridColumn>
         <DataGridColumn TItem="WeatherForecast" Caption="Temp. F" Field="@nameof(WeatherForecast.TemperatureF)"></DataGridColumn>
         <DataGridColumn TItem="WeatherForecast" Caption="Summary" Field="@nameof(WeatherForecast.Summary)"></DataGridColumn>
