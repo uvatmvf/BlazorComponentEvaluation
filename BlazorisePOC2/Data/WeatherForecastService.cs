@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorComponentEvaluation.Data
+namespace BlazorisePOC2.Data
 {
     public class WeatherForecastService
     {

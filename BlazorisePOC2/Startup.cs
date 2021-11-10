@@ -1,4 +1,7 @@
-using BlazorComponentEvaluation.Data;
+using Blazorise;
+using Blazorise.Bootstrap;
+using Blazorise.Icons.FontAwesome;
+using BlazorisePOC2.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -11,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorComponentEvaluation
+namespace BlazorisePOC2
 {
     public class Startup
     {
@@ -29,6 +32,9 @@ namespace BlazorComponentEvaluation
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddBlazorise(options => { options.ChangeTextOnKeyPress = true; })
+                .AddBootstrapProviders()
+                .AddFontAwesomeIcons();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,6 @@
 using System;
 
-namespace BlazorComponentEvaluation.Data
+namespace BlazorisePOC2.Data
 {
     public class WeatherForecast
     {
