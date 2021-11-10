@@ -4,9 +4,17 @@
 <MudSnackbarProvider/>
 
 <MudLayout>
-    <MudAppBar>
+    <MudAppBar>        
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        My Application
+        <MudItem Class="align-left">
+            <MudIconButton Icon="@Icons.Filled.ArrowRight" Color="Color.Inherit" Edge="Edge.Start"></MudIconButton>
+            <span>Shop Name 111 Cedar Avenue</span>
+            <MudIconButton Icon="@Icons.Filled.Call" Color="Color.Inherit" Edge="Edge.Start"></MudIconButton><span>555-5555</span>  
+        </MudItem>
+        <MudSpacer />
+        <MudItem Class="d-flex align-items-end">
+            <label>@DateTime.Now</label>
+        </MudItem>
     </MudAppBar>
     <MudDrawer @bind-Open="@_drawerOpen">
         <NavMenu />
